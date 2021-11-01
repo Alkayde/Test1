@@ -6,28 +6,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.io.*;
-import java.net.URL;
-
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
 
-        URL resource = Main.class.getResource("resources/drivers/chromedriver.exe");
-        File f = new File("Driver");
-        if (!f.exists()) {
-            f.mkdirs();
-        }
-        File chromeDriver = new File("Driver" + File.separator + "chromedriver.exe");
-        if (!chromeDriver.exists()) {
-            try {
-                chromeDriver.createNewFile();
-                org.apache.commons.io.FileUtils.copyURLToFile(resource, chromeDriver);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        System.out.println(resource);
+
         System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver.exe");
         Thread.sleep(500);
         WebDriver driver = new ChromeDriver();
