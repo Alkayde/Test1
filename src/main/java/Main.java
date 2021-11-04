@@ -34,6 +34,6 @@ public class Main {
         Thread.sleep(15000);
         driver.quit();
 
-        //testpush
+        //testpus
     }
 }
