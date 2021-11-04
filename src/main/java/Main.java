@@ -33,7 +33,6 @@ public class Main {
         textWrite.sendKeys("Hello world" + Keys.LEFT_CONTROL + Keys.ENTER);
         Thread.sleep(15000);
         driver.quit();
-
         //testpush
     }
 }
